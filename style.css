@@ -2,11 +2,15 @@
   display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 100%;
 }
 
 .logo {
   text-align: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,255,0,1) 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body {
@@ -32,14 +36,37 @@ a:hover {
   text-decoration-color: hotpink;
 }
 
-.columns {
+#wrapper {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  #wrapper {
+    flex-direction: column;
+    width: 480px;
+  }
+
+  .logo {
+    font-size: xx-small;
+  }
+}
+
+.row {
   vertical-align: top;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .column {
-  display: inline-block;
   vertical-align: top;
-  padding: 10px;
+  padding: 20px;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 .info {
@@ -51,6 +78,4 @@ a:hover {
 
 }
 
-.drop-shadow {
-	filter: drop-shadow(0 0mm 10mm rgb(160, 0, 210));
-}
+.detail { margin:0 }
