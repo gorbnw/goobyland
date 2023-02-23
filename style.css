@@ -16,6 +16,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
   background-image: url("texture.jpg");
   background-repeat: repeat;
+  font-size: 15;
 }
 
 .spacer {
@@ -81,4 +82,7 @@ a:hover {
 
 }
 
-.detail { margin:0 }
+.detail {
+  margin-top: -15px;
+  padding-bottom: 5px;
+ }
