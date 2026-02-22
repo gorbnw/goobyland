@@ -1,7 +1,7 @@
 .center {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .logo {
@@ -16,7 +16,6 @@ body {
   font-family: 'Courier New', Courier, monospace;
   background-image: url("texture.jpg");
   background-repeat: repeat;
-  font-size: 15;
 }
 
 .spacer {
@@ -40,37 +39,26 @@ a:hover {
   color: lime;
 }
 
-#wrapper {
+#wrapper.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: row;
 }
 
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-  #wrapper {
-    flex-direction: column;
-    width: 375px;
-  }
-
-  .logo {
-    font-size: 7px;
-  }
-}
+/* GRID LAYOUT */
 
 .row {
-  vertical-align: top;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   width: 100%;
 }
 
 .column {
-  vertical-align: top;
   padding: 20px;
-  flex-basis: 100%;
-  flex: 1;
 }
 
 .info {
@@ -85,4 +73,21 @@ a:hover {
 .detail {
   margin-top: -15px;
   padding-bottom: 5px;
- }
+}
+
+/* Responsive layout - makes one column on small screens */
+
+@media (max-width: 800px) {
+
+  #wrapper {
+    width: 375px;
+  }
+
+  #wrapper.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    font-size: 7px;
+  }
+}
