@@ -22,8 +22,16 @@ body {
   padding-top: 10px;
 }
 
+h2 {
+  text-align: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(0,255,0,1) 65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h3 {
-  text-decoration: underline;
+  color: #FF0080
 }
 
 a {
